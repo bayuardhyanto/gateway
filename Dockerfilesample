@@ -1,0 +1,7 @@
+FROM nginx:alpine
+#FROM ubuntu:nginx
+
+
+RUN apk add nano curl nginx
+#RUN apt-get update
+#RUN apt-get install nano curl openssh-server -y
