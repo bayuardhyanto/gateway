@@ -5,7 +5,9 @@ RUN mkdir /run/sshd
 #RUN apt update && apt install -y apt-utils
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g ubuntu -G ubuntu -u 1001 ubuntu
 
-RUN apt-get update && apt-get install -y nano curl openssh-server iproute2 nginx sudo
+ENV TZ="Asia/Jakarta"
+
+RUN apt-get update && apt-get install -y nano curl openssh-server iproute2 nginx sudo tzdata
 
 #CMD ["/usr/sbin/sshd","-D"] 
 RUN mkdir /app
