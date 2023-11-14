@@ -7,7 +7,7 @@ RUN useradd -rm -d /home/ubuntu -s /bin/bash -g ubuntu -G ubuntu -u 1001 ubuntu
 
 ENV TZ="Asia/Jakarta"
 
-RUN apt-get update && apt-get install -y nano curl openssh-server iproute2 nginx sudo tzdata
+RUN apt-get update && apt-get install -y nano curl openssh-server iproute2 nginx-extras sudo tzdata
 
 #CMD ["/usr/sbin/sshd","-D"] 
 RUN mkdir /app
